@@ -1,108 +1,9 @@
-<script>
-
-        var num = 0;  // ¶¨ÒåµÚÒ»¸öÊäÈëµÄÊı¾İ
-
-        function jsq(num) {
-
-            //»ñÈ¡µ±Ç°ÊäÈë
-
-            if(num=="%"){
-
-                document.getElementById('screenName').value=Math.round(document.getElementById('screenName').value)/100;
-
-            }else{
-
-                document.getElementById('screenName').value += document.getElementById(num).value;
-
-            }
-
-        }
-
-        function eva() {
-
-            //¼ÆËãÊäÈë½á¹û
-
-            document.getElementById("screenName").value = eval(document.getElementById("screenName").value);
-
-        }
-
-        function clearNum() {
-
-            //Çå0
-
-            document.getElementById("screenName").value = null;
-
-            document.getElementById("screenName").focus();
-
-        }
-
-        function tuiGe() {
-
-            //ÍË¸ñ
-
-            var arr = document.getElementById("screenName");
-
-            arr.value = arr.value.substring(0, arr.value.length - 1);
-
-        }
-
-    </script>
 
 <!DOCTYPE html>
 <html>
 <head>
 <title></title>
-
-<body>
-<div id="calculator">
-    <div class="LOGO">
-        <span class="name">¼òµ¥µÄ¼ÆËãÆ÷</span>
-       
-    </div>
-    <div id="shuRu">
-     
-        <div class="screen">
-            <input type="text" id="screenName" name="screenName" class="screen">
-        </div>
-    </div>
-    <div id="keys">
-     
-   
-        <input type="button" id="7" onclick="jsq(this.id)" value="7" class="buttons">
-        <input type="button" id="8" onclick="jsq(this.id)" value="8" class="buttons">
-        <input type="button" id="9" onclick="jsq(this.id)" value="9" class="buttons">
-        <input type="button" id="Back" onclick="tuiGe()" value="Back" class="buttons">
-        <input type="button" id="C" onclick="clearNum()" value="C" class="buttons" style="margin-right:0px">
-   
-        <input type="button" id="4" onclick="jsq(this.id)" value="4" class="buttons">
-        <input type="button" id="5" onclick="jsq(this.id)" value="5" class="buttons">
-        <input type="button" id="6" onclick="jsq(this.id)" value="6" class="buttons">
-        <input type="button" id="00" onclick="jsq(this.id)" value="00" class="buttons">
-        <input type="button" id="0" onclick="jsq(this.id)" value="0" class="buttons" style="margin-right:0px">
-
-        <input type="button" id="1" onclick="jsq(this.id)" value="1" class="buttons">
-        <input type="button" id="2" onclick="jsq(this.id)" value="2" class="buttons">
-        <input type="button" id="3" onclick="jsq(this.id)" value="3" class="buttons">
-        <input type="button" id="+" onclick="jsq(this.id)" value="+" class="buttons">
-        <input type="button" id="-" onclick="jsq(this.id)" value="-" class="buttons" style="margin-right:0px">
-  
-        <input type="button" id="*" onclick="jsq(this.id)" value="*" class="buttons">
-        <input type="button" id="/" onclick="jsq(this.id)" value="/" class="buttons"> 
-        <input type="button" id="." onclick="jsq(this.id)" value="." class="buttons">
-        <input type="button" id="%" onclick="jsq(this.id)" value="%" class="buttons">
-        <input type="button" id="eva" onclick="eva()" value="=" class="buttons" style="margin-right:0px">
-       
-    </div>
-    <div class="footer">
-        <span class="aside">»¶Ó­Ê¹ÓÃ¼ÆËãÆ÷</span>
-            </span>
-    </div>
-</div>
-
-</body>
-
-
-<style>
+ <style>
         /*Basic reset*/
 *{
     margin:0;
@@ -175,31 +76,102 @@ html{
     margin: 0 17px 20px 0;
 }
     </style>
+       
+<script>
+
+        var num = 0;  // å®šä¹‰ç¬¬ä¸€ä¸ªè¾“å…¥çš„æ•°æ®
+
+        function jsq(num) {
+
+            //è·å–å½“å‰è¾“å…¥
+
+            if(num=="%"){
+
+                document.getElementById('screenName').value=Math.round(document.getElementById('screenName').value)/100;
+
+            }else{
+
+                document.getElementById('screenName').value += document.getElementById(num).value;
+
+            }
+
+        }
+
+        function eva() {
+
+            //è®¡ç®—è¾“å…¥ç»“æœ
+
+            document.getElementById("screenName").value = eval(document.getElementById("screenName").value);
+
+        }
+
+        function clearNum() {
+
+            //æ¸…0
+
+            document.getElementById("screenName").value = null;
+
+            document.getElementById("screenName").focus();
+
+        }
+
+        function tuiGe() {
+
+            //é€€æ ¼
+
+            var arr = document.getElementById("screenName");
+
+            arr.value = arr.value.substring(0, arr.value.length - 1);
+
+        }
+
+    </script>
+<body>
+<div id="calculator">
+    <div class="LOGO">
+        <span class="name">ç®€å•çš„è®¡ç®—å™¨</span>
+       
+    </div>
+    <div id="shuRu">
+     
+        <div class="screen">
+            <input type="text" id="screenName" name="screenName" class="screen">
+        </div>
+    </div>
+    <div id="keys">
+     
+   
+        <input type="button" id="7" onclick="jsq(this.id)" value="7" class="buttons">
+        <input type="button" id="8" onclick="jsq(this.id)" value="8" class="buttons">
+        <input type="button" id="9" onclick="jsq(this.id)" value="9" class="buttons">
+        <input type="button" id="Back" onclick="tuiGe()" value="Back" class="buttons">
+        <input type="button" id="C" onclick="clearNum()" value="C" class="buttons" style="margin-right:0px">
+   
+        <input type="button" id="4" onclick="jsq(this.id)" value="4" class="buttons">
+        <input type="button" id="5" onclick="jsq(this.id)" value="5" class="buttons">
+        <input type="button" id="6" onclick="jsq(this.id)" value="6" class="buttons">
+        <input type="button" id="00" onclick="jsq(this.id)" value="00" class="buttons">
+        <input type="button" id="0" onclick="jsq(this.id)" value="0" class="buttons" style="margin-right:0px">
+
+        <input type="button" id="1" onclick="jsq(this.id)" value="1" class="buttons">
+        <input type="button" id="2" onclick="jsq(this.id)" value="2" class="buttons">
+        <input type="button" id="3" onclick="jsq(this.id)" value="3" class="buttons">
+        <input type="button" id="+" onclick="jsq(this.id)" value="+" class="buttons">
+        <input type="button" id="-" onclick="jsq(this.id)" value="-" class="buttons" style="margin-right:0px">
+  
+        <input type="button" id="*" onclick="jsq(this.id)" value="*" class="buttons">
+        <input type="button" id="/" onclick="jsq(this.id)" value="/" class="buttons"> 
+        <input type="button" id="." onclick="jsq(this.id)" value="." class="buttons">
+        <input type="button" id="%" onclick="jsq(this.id)" value="%" class="buttons">
+        <input type="button" id="eva" onclick="eva()" value="=" class="buttons" style="margin-right:0px">
+       
+    </div>
+    <div class="footer">
+        <span class="aside">æ¬¢è¿ä½¿ç”¨è®¡ç®—å™¨</span>
+            </span>
+    </div>
+</div>
+
+</body>
 
 
-
-#keys{
-    border:1px solid lightgray;
-    height:223px;
-    margin-top:25px;
-    padding:8px;
-}
-#keys .last{
-    margin-right:0px;
-}
-.footer{
-    margin-top:20px;
-    height:20px;
-}
-.footer .link{
-    float:right;
-}
-
-#keys .buttons{
-    float:left;
-    width: 42px;
-    height: 36px;
-    text-align:center;
-    background-color:lightgray;
-    margin: 0 17px 20px 0;
-}
