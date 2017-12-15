@@ -175,3 +175,31 @@ html{
     margin: 0 17px 20px 0;
 }
     </style>
+
+
+
+#keys{
+    border:1px solid lightgray;
+    height:223px;
+    margin-top:25px;
+    padding:8px;
+}
+#keys .last{
+    margin-right:0px;
+}
+.footer{
+    margin-top:20px;
+    height:20px;
+}
+.footer .link{
+    float:right;
+}
+
+#keys .buttons{
+    float:left;
+    width: 42px;
+    height: 36px;
+    text-align:center;
+    background-color:lightgray;
+    margin: 0 17px 20px 0;
+}
